@@ -1,0 +1,608 @@
+/* Start Variables */
+
+ :root {
+    --main-color: #10cab7;
+    --secondary-color: #2c4755;
+    --section-padding: 60px;
+    --section-background: #f6f6f6;
+    --main-duration: 0.5s;
+}
+
+
+/* End Variables */
+
+
+/* Start Global Rules */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.heading-text {
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.heading-text h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 103px;
+    margin: 0;
+    padding: 0;
+    letter-spacing: -8px;
+    font-weight: 800;
+    color: rgb(207, 207, 207);
+}
+
+.heading-text p {
+    position: relative;
+    margin: 0;
+    top: -40px;
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    .heading-text h1 {
+        font-size: 90px;
+        margin: 0;
+        padding: 0;
+        font-weight: 800;
+        color: rgb(207, 207, 207);
+    }
+    .heading-text p {
+        position: relative;
+        margin: 0;
+        top: -35px;
+        padding: 0;
+    }
+}
+
+
+/* Small */
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+
+/* Medium */
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+
+/* Large */
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+
+/* End Global Rules */
+
+
+/* Start Componet  */
+
+
+/* Start Navigation Bar  */
+
+.nav-bar {
+    padding: 20px;
+}
+
+.nav-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-bar .container .logo {
+    max-width: 70px;
+}
+
+.nav-bar .container .logo img {
+    width: 100%;
+}
+
+.nav-bar .container .links {
+    position: relative;
+}
+
+.nav-bar .container .links .icon {
+    min-width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.nav-bar .container .links .icon span {
+    background-color: var(--secondary-color);
+    height: 2px;
+    padding: 2px;
+    margin-bottom: 5px;
+}
+
+.nav-bar .container .links .icon span:first-child {
+    width: 100%;
+}
+
+.nav-bar .container .links .icon span:nth-child(2) {
+    width: 60%;
+    transition: var(--main-duration);
+}
+
+.nav-bar .container .links .icon span:last-child {
+    width: 100%;
+}
+
+.nav-bar .container .links:hover .icon span {
+    width: 100%;
+}
+
+.nav-bar .container .links ul {
+    right: 15px;
+    padding: 0;
+    position: absolute;
+    list-style: none;
+    min-width: 130px;
+    margin: 20px auto 0;
+    background-color: var(--section-background);
+    border-radius: 5px;
+    display: none;
+    transition: display var(--main-duration);
+}
+
+.nav-bar .container .links ul::before {
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    position: absolute;
+    right: 5px;
+    top: -20px;
+}
+
+.nav-bar .container .links:hover ul {
+    display: block;
+}
+
+.nav-bar .container .links ul li {
+    padding: 10px;
+    /* left: -19px; */
+    display: flex;
+    justify-content: flex-start;
+    right: 20px;
+}
+
+.nav-bar .container .links ul li:not(:last-child) {
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.nav-bar .container .links ul li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    display: inline-block;
+    transition: var(--main-duration);
+}
+
+.nav-bar .container .links ul li:hover a {
+    padding-left: 15px;
+}
+
+
+/* End Navigation Bar  */
+
+
+/* Start Heading  */
+
+.heading {
+    background-image: url(../imgs/landing.jpg);
+    margin: 0;
+    background-size: cover;
+    height: calc(100vh - 72px);
+}
+
+.heading .into {
+    margin: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    max-width: 350px;
+    position: absolute;
+}
+
+.heading .into h2 {
+    color: var(--main-color);
+    font-size: 50px;
+    margin: 0;
+}
+
+.heading .into p {
+    line-height: 2.2;
+    font-size: 18px;
+}
+
+@media (max-width:570px) {
+    .heading .into {
+        margin: 0;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        position: absolute;
+        min-width: 266px;
+    }
+    .heading .into p {
+        line-height: 2.2;
+        font-size: 16px;
+        /* font-weight: bold; */
+    }
+    .heading .into h2 {
+        color: var(--main-color);
+        font-size: 32px;
+        margin: 0;
+    }
+}
+
+
+/* End Heading  */
+
+
+/* Strat feature */
+
+.feature {
+    width: 100%;
+    margin: 0;
+    background-color: var(--section-background);
+}
+
+.feature .container {
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.feature .container .any-content {
+    padding: 40px;
+    text-align: center;
+    margin: 70px auto 0;
+}
+
+.feature .container .any-content i {
+    color: var(--main-color);
+    font-size: 40px;
+    padding: 10px;
+}
+
+.feature .container .any-content p {
+    color: #777;
+    font-size: 17px;
+    line-height: 1.9;
+    text-align: center;
+    padding: 5px;
+}
+
+
+/* End feature */
+
+
+/* Strat Services */
+
+.services {
+    /* background-color: var(--section-background); */
+    margin: 0;
+    padding: 0;
+}
+
+.services .services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+    margin-top: 100px;
+}
+
+.services .services-content .srv {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+    .services .services-content .srv {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.services .services-content .srv i {
+    color: var(--main-color);
+    flex-basis: 60px;
+}
+
+.services .services-content .srv .text {
+    flex: 1;
+}
+
+.services .services-content .srv .text h2 {
+    margin: 0 0 20px;
+}
+
+.services .services-content .srv .text p {
+    color: #444;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.services .services-content .image {
+    text-align: center;
+    position: relative;
+}
+
+.services .services-content .image::before {
+    content: "";
+    background-color: var(--secondary-color);
+    width: 100px;
+    height: calc(100% + 100px);
+    top: -50px;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+}
+
+.services .services-content .image img {
+    width: 260px;
+}
+
+@media (max-width: 1199px) {
+    .image-column {
+        display: none;
+    }
+}
+
+
+/* end Services */
+
+
+/* Start portfoilo */
+
+.portfoilo {
+    margin: 0;
+    background-color: var(--section-background);
+}
+
+.portfoilo .container {
+    padding-bottom: 100px;
+}
+
+.portfoilo .container .portfoilo-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.portfoilo .container .portfoilo-content .col {
+    min-width: 300px;
+    background-color: white;
+}
+
+.portfoilo .container .portfoilo-content .image img {
+    width: 100%;
+}
+
+.portfoilo .container .portfoilo-content .text-portfolio {
+    padding: 20px;
+    color: #333;
+    line-height: 1.7;
+}
+
+
+/* End portfoilo */
+
+.about {
+    margin: 0;
+    /* background-color: white; */
+}
+
+.about .about-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about .about-content .image img {
+    width: 100%;
+}
+
+.about .about-content .image {
+    max-width: 300px;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.about .about-content .image::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: calc(100% + 60px);
+    border: 0;
+    left: -50px;
+    top: -30px;
+    background-color: var(--section-background);
+    z-index: -1;
+}
+
+.about .about-content .image::after {
+    top: -40px;
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 300px;
+    border-left: 80px solid var(--main-color);
+    border-bottom: 80px solid var(--main-color);
+    z-index: -1;
+    right: -150px;
+}
+
+.about .about-content .about-text {
+    max-width: 533px;
+    padding: 20px;
+    line-height: 1.4;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.about .about-content .about-text hr {
+    background-color: var(--main-color);
+    color: var(--main-color);
+    border: 2px solid;
+    width: 50%;
+}
+
+@media (max-width:997px) {
+    .about .about-content .image {
+        display: none;
+    }
+    .about .about-content .about-text {
+        max-width: calc(100% - 100px);
+        text-align: center;
+        line-height: 1.7;
+    }
+}
+
+@media (max-width: 768px) {
+    .about .about-content .about-text {
+        max-width: calc(100% - 30px);
+        text-align: center;
+        font-size: 20px;
+        line-height: 1.2;
+        padding: 0;
+    }
+}
+
+
+/* Start Contact */
+
+.contact {
+    background-color: var(--section-background);
+    padding-bottom: 60px;
+}
+
+.contact .container .contact-contnet {
+    text-align: center;
+}
+
+.contact .container .contact-contnet .text1 {
+    color: var(--secondary-color);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact .container .contact-contnet .text1 a {
+    text-decoration: none;
+    color: var(--main-color);
+    font-weight: 800;
+    font-size: 1em;
+}
+
+.contact .container .contact-contnet .text1 a:visited {
+    color: var(--main-color);
+}
+
+.contact .container .contact-contnet .text1 a:focus {
+    color: var(--main-color);
+}
+
+.contact .container .contact-contnet .text1 a:active {
+    color: var(--main-color);
+}
+
+.contact .container .contact-contnet .socail {
+    font-size: 1.3em;
+}
+
+.contact .container .contact-contnet .socail span {
+    display: block;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.contact .container .contact-contnet .socail i {
+    padding-right: 10px;
+}
+
+.contact .container .contact-contnet .socail a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 800;
+    font-size: 1.2em;
+}
+
+.contact .container .contact-contnet .socail a:visited {
+    color: var(--secondary-color);
+}
+
+.contact .container .contact-contnet .socail a:focus {
+    color: var(--secondary-color);
+}
+
+.contact .container .contact-contnet .socail a:active {
+    color: var(--secondary-color);
+}
+
+
+/* End Contact */
+
+
+/* start Footer  */
+
+.footer {
+    background-color: var(--secondary-color);
+    height: 100px;
+    position: relative;
+}
+
+.footer div {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5em;
+}
+
+.footer span {
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+
+/* End Footer  */
+
+
+/* End Componet  */
